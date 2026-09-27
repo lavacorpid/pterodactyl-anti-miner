@@ -31,22 +31,17 @@ Setiap kali dijalankan (lewat cron, default tiap menit), script:
 ### Cara tercepat — satu baris perintah (tanpa git)
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/<user-atau-org>/xmrig-guard/main/install-remote.sh | sudo bash
+curl -fsSL https://raw.githubusercontent.com/lavacorpid/pterodactyl-anti-miner/main/install-remote.sh | sudo bash
 ```
 
 Perintah ini langsung download `xmrig-guard.sh` + `xmrig-guard.logrotate` dari
 repo, pasang ke `/opt/xmrig-guard/`, dan setup cron — semua dalam satu
 eksekusi, tidak perlu `git clone` atau download manual.
 
-> **Sebelum dipakai:** buka `install-remote.sh` di repo, ganti
-> `<user-atau-org>` pada baris `REPO_RAW_BASE` dengan username/org GitHub
-> kamu yang sebenarnya, baru upload ke repo. Kalau tidak diganti, download
-> filenya akan gagal (404).
-
 ### Cara alternatif — clone repo dulu
 
 ```bash
-git clone https://github.com/<user-atau-org>/xmrig-guard.git
+git clone https://github.com/lavacorpid/pterodactyl-anti-miner.git
 cd xmrig-guard
 sudo ./install.sh
 ```
@@ -62,7 +57,7 @@ Untuk pasang ke banyak node sekaligus lewat SSH loop, pakai versi satu baris:
 
 ```bash
 for host in node1 node2 node3; do
-  ssh root@$host "curl -fsSL https://raw.githubusercontent.com/<user-atau-org>/xmrig-guard/main/install-remote.sh | sudo bash"
+  ssh root@$host "curl -fsSL https://raw.githubusercontent.com/lavacorpid/pterodactyl-anti-miner/main/install-remote.sh | sudo bash"
 done
 ```
 
