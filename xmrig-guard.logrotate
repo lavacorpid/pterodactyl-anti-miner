@@ -1,0 +1,7 @@
+/var/log/xmrig-guard.log {
+    weekly
+    rotate 8
+    compress
+    missingok
+    notifempty
+}
